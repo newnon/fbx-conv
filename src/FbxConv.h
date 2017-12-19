@@ -170,6 +170,7 @@ class FbxConv {
 				file.AddModel(model);
 				file.saveBinary(out);
 				log->status(log::sExportToG3DB, out.c_str());
+				result = true;
 			}
 
 			log->status(log::sExportClose);
