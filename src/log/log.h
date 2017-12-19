@@ -106,7 +106,7 @@ namespace log {
 				case LOG_INFO:		printf("INFO:     %s\n", s); break;
 				case LOG_VERBOSE:	printf("VERBOSE:  %s\n", s); break;
 				case LOG_WARNING:	printf("WARNING:  %s\n", s); break;
-				case LOG_ERROR:		printf("ERROR:    %s\n", s); break;
+				case LOG_ERROR:		if(stderr) fprintf( stderr, "ERROR:    %s\n", s) else printf("ERROR:    %s\n", s); break;
 				default: break;
 				}
 			}
